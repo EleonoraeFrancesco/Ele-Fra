@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eleonora & Francesco - 30.09.2025</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Dancing Script -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <!--  Great Vibes -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <!-- Buttershine -->
+  <!--<link href="https://fonts.cdnfonts.com/css/buttershine-serif" rel="stylesheet">-->
+  <!-- Milton one -->
+  <link href="https://fonts.cdnfonts.com/css/milton-one" rel="stylesheet">
+
+
+  <style>
+    @font-face {
+      font-family: 'Buttershine';
+      src: url('font/buttershine-script.ttf') format('truetype'),
+        url('font/buttershine-serif.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'poor';
+      src: url('font/PoorRichardOpti.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      background: #fff;
+      font-family: 'poor', sans-serif;
+      color: #5a4a42;
+    }
+
+    p {
+      font-size: 1.5em;
+    }
+
+    .header-bg {
+      background: url('img/fiori.jpg') no-repeat center/cover;
+      padding: 4em 0 4em 0;
+      position: relative;
+    }
+
+    .header-bg::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .watercolor {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      opacity: 0.2;
+      pointer-events: none;
+    }
+
+    .title {
+      font-family: 'Milton One', sans-serif;
+      font-size: 10rem;
+      /*letter-spacing: 0.1em;*/
+      font-weight: 700;
+    }
+
+    .datesub {
+      font-family: 'Buttershine', sans-serif;
+      font-size: 4rem;
+      letter-spacing: 0.1em;
+      font-weight: 700;
+      color: #c97f5a;
+    }
+
+    .subtitle {
+      font-family: 'Buttershine', sans-serif;
+      font-size: 6.5rem;
+      color: #c97f5a;
+    }
+
+    i.subtitle {
+      font-size: 2.5rem;
+    }
+
+    .section-bg {
+      position: relative;
+      padding: 40px 0;
+      z-index: 1;
+    }
+
+    .section-bg::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('img/fiori.jpg') no-repeat center center fixed;
+      background-size: cover;
+      opacity: 0.4;
+      /* ← solo l'immagine è trasparente */
+      z-index: -1;
+    }
+
+    .quote {
+      font-size: 4.2rem;
+      padding: 30px 0;
+      font-family: 'Milton One Bold', sans-serif;
+      background-size: cover;
+    }
+
+    .benvenuto {
+      position: relative;
+      z-index: 1;
+      padding: 6em 0;
+    }
+
+    .benvenuto::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #c25213;
+      opacity: 0.5;
+      z-index: -1;
+    }
+
+    .benvenuto .subtitle {
+      font-size: 7em;
+      color: #545744;
+    }
+
+    .benvenuto p {
+      font-size: 1.5em;
+      line-height: 1.1;
+      font-family: "poor", sans-serif;
+    }
+
+    .benvenuto .font-corsivo-dance {
+      font-weight: 100;
+    }
+
+    .luogocerimonia {
+      position: relative;
+      z-index: 1;
+      padding: 6em 0;
+    }
+
+    .luogocerimonia::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #545744;
+      opacity: 0.5;
+      z-index: -1;
+    }
+
+    .luogocerimonia span {
+      font-family: 'buttershine', sans-serif;
+      font-size: 3em;
+      font-weight: 100;
+    }
+
+    .listanozze {
+      position: relative;
+      z-index: 1;
+      padding: 6em 0;
+    }
+
+    .listanozze::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      /*background-color: #545744;*/
+      background-color: white;
+      opacity: 0.5;
+      z-index: -1;
+    }
+
+    /*.listanozze .subtitle {
+      color: #c25213;
+    }*/
+
+    .vicinanze {
+      position: relative;
+      z-index: 1;
+      padding: 6em 0;
+    }
+
+    .vicinanze::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #dd9751;
+      opacity: 0.5;
+      z-index: -1;
+    }
+
+    .vicinanze h5 {
+      font-size: 2.5em;
+      text-align: center;
+      margin-top: 0.5em;
+    }
+
+    .countdown {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #c97f5a;
+      margin: 20px 0;
+    }
+
+    .form-section {
+      background: rgba(249, 227, 210, 0.8);
+      border-radius: 10px;
+      padding: 30px;
+      margin-bottom: 40px;
+    }
+
+    .card-img-top {
+      height: 35em;
+      object-fit: cover;
+    }
+
+    .map-responsive {
+      overflow: hidden;
+      padding-bottom: 30em;
+      position: relative;
+      height: 0;
+    }
+
+    .map-responsive iframe {
+      left: 0;
+      top: 0;
+      /*height: 100%;*/
+      height: 30em;
+      width: 100%;
+      position: absolute;
+      border: 0;
+    }
+
+    .font-corsivo-dance {
+      font-family: 'Milton One Bold', sans-serif;
+      font-weight: 700;
+    }
+
+    .font-25 {
+      font-size: 2.5rem;
+    }
+
+    /* oppure per Great Vibes */
+    .font-corsivo-vibes {
+      font-family: 'Great Vibes', cursive;
+    }
+
+    .outer-frame {
+      background-color: #c25213;
+      /* beige */
+      padding: 20px;
+      display: inline-block;
+    }
+
+    .inner-frame {
+      background-color: #ffffff;
+      /* bianco */
+      padding: 10px;
+    }
+
+    .image-style {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+
+    @media (max-width: 767px) {
+      .title {
+        font-size: 4rem;
+      }
+
+      .subtitle {
+        font-size: 3rem;
+      }
+
+      .datesub {
+        font-size: 1.6rem;
+      }
+
+      p {
+        font-size: 0.7rem;
+      }
+
+      .form-section {
+        padding: 15px;
+      }
+
+      .font-25 {
+        font-size: 1.5rem;
+      }
+
+      .header-bg {
+        padding: 0px;
+      }
+
+      i.subtitle {
+        font-size: 1.5rem;
+      }
+
+      .benvenuto p {
+        font-size: 1em;
+      }
+
+      .benvenuto .subtitle,
+      .listanozze .subtitle,
+      .vicinanze .subtitle {
+        font-size: 5em;
+        margin: 0px !important;
+      }
+
+      .luogocerimonia .subtitle,
+      .conferma .subtitle {
+        font-size: 4em;
+      }
+
+      .benvenuto .font-corsivo-dance {
+        font-size: 2.5em !important;
+      }
+
+      .luogocerimonia p,
+      .conferma p,
+      .listanozze p,
+      .vicinanze p {
+        font-size: 1em;
+      }
+
+      .listanozze p .spantitle {
+        font-size: 1.3em;
+        line-height: 4em;
+      }
+    }
+  </style>
+  <!-- Google Fonts for demo -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Dancing+Script:wght@700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <div class="header-bg text-center position-relative">
+    <div class="watercolor"></div>
+    <div class="header-content">
+      <div class="subtitle mb-1 pt-2">Ci sposiamo!</div>
+      <div class="title">Eleonora &amp; Francesco</div>
+      <div class="mb-2"><b>_______________________________________</b></div>
+      <div class="datesub mb-3">30 Settembre 2025</div>
+      <i class="subtitle bi bi-heart-fill"></i>
+
+      <!--<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=400&h=300&q=80" 
+      alt="Eleonora e Francesco" class="rounded shadow" 
+      style="width:220px; height:220px; object-fit:cover; border:6px solid #fff;">-->
+    </div>
+  </div>
+
+  <!-- Presentazione -->
+  <section class="benvenuto text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 d-flex align-items-center justify-content-center">
+          <div class="inner-frame">
+            <div class="inner-frame">
+              <img src="img/img1_2.jpeg" alt="Coppia" class="image-style">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 col-sm-12">
+          <h2 class="subtitle mb-3 mt-5">Benvenuti!</h2>
+          <p>
+            Siamo emozionati di vivere questo giorno speciale circondati dall'affetto delle persone a noi più care.<br>
+            In questa pagina troverete tutte le informazioni utili per partecipare al nostro matrimonio.<br>
+            Non vediamo l’ora di condividere con voi ogni istante di questa giornata indimenticabile!<br><br>
+
+            <span class="font-corsivo-dance" style="font-size: 3em;">Eleonora & Francesco</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Luoghi della cerimonia -->
+  <section class="py-5 section-bg luogocerimonia">
+    <div class="container py-5">
+      <h2 class="subtitle mb-4 text-center">Luogo del Matrimonio</h2>
+
+      <div class="inner-frame">
+        <div class="inner-frame">
+          <div class="row g-4 mb-4">
+            <div class="col-md-6 col-sm-12 text-center d-flex align-items-center justify-content-center">
+              <p class="">Ore 12:00<br>
+                <span><b>San Tommaso Ricevimenti</b></span><br>
+                C.da Bagiolaro, sn - S.P. Polignano - Conversano km1
+                <br>Polignano a Mare (BA)
+              </p>
+            </div>
+            <div class="col-md-6 col-sm-12">
+
+              <div class="row g-4">
+                <div class="col-md-12">
+                  <div class="map-responsive">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.7484748862767!2d17.187745976291236!3d40.9869882207352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1347cbde83b6f139%3A0xf9855c8348aa1b6b!2sSan%20Tommaso%20Ricevimenti%20%26%20Hotel!5e0!3m2!1sit!2sit!4v1749038112023!5m2!1sit!2sit"></iframe>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- vicinanze -->
+  <section class="vicinanze">
+    <div class="container">
+      <h2 class="subtitle mb-4 text-center">Nelle vicinanze...</h2>
+      <div class="row g-4">
+        <div class="col-md-4 d-flex">
+          <div class="inner-frame d-flex flex-column h-100">
+            <img src="img/bari.png" class="card-img-top" alt="Preparativi">
+            <p>Bari, capoluogo della Puglia, è una vivace città di mare ricca di storia e cultura, con un affascinante centro storico che si affaccia sull'Adriatico e una cucina tradizionale che conquista ogni visitatore.</p>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex">
+          <div class="inner-frame d-flex flex-column h-100">
+            <img src="img/polignano.png" class="card-img-top" alt="Preparativi">
+            <p>Polignano a Mare incanta con le sue scogliere a picco sul mare cristallino e il suo borgo antico caratterizzato da vicoli suggestivi, offrendo un'atmosfera romantica e panorami mozzafiato.</p>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex">
+          <div class="inner-frame d-flex flex-column h-100">
+            <img src="img/monopoli.png" class="card-img-top" alt="Preparativi">
+            <p>Monopoli unisce un centro storico medievale ricco di monumenti, un porto vivace e spiagge incantevoli, perfetta per chi cerca cultura, mare e tradizione pugliese.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+  <!-- Lista di Nozze -->
+  <section class="py-5 listanozze text-center">
+    <div class="container py-5">
+      <h2 class="subtitle mb-4 ">Luna di Miele</h2>
+      <div class="row align-items-center">
+        <div class="col-md-6 col-sm-12">
+          <img src="img/giappone.png" class="card-img-top" alt="San Tommaso">
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <p>
+            <strong><span class="spantitle">Il nostro sogno si chiama Giappone!</span></strong><br>
+            Per la nostra luna di miele desideriamo vivere un’esperienza indimenticabile tra cultura, natura e
+            tradizione. <br>
+            Se vorrete contribuire a realizzare questo viaggio speciale, potrete farlo con un pensiero verso la nostra
+            lista viaggio.<br><br>
+            IBAN: IT00A0000000000000000000000<br>
+            Causale: “Viaggio di nozze Eleonora e Francesco”
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Countdown & RSVP -->
+  <section class="section-bg conferma" style="background:#e9d6bd;">
+    <div class="container text-center">
+      <h2 class="subtitle mb-3">Conferma la tua presenza</h2>
+      <p>Non vediamo l’ora di festeggiare con voi!</p>
+      <div class="mb-2"><b>_______________________________________</b></div>
+      <div class="countdown" id="countdown"></div>
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="container py-5">
+            <div class="row align-items-center">
+              <div class="col-md-12">
+                <p>
+                  email@email.com<br>
+                  Eleonora: 3333333333<br>
+                  Francesco: 3333333333<br>
+                </p>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Citazione -->
+  <div class="text-center quote section-bg">
+    <div class="py-5">
+      “L'amore è come il vento. Non lo vedo, ma lo percepisco.”<br>
+      <span style="font-size:0.7em;">I passi dell'amore</span><br>
+    </div>
+  </div>
+
+  <footer class="section-bg text-center py-2" style="background:rgba(249,227,210,0.8); font-size:1.3em;">
+    <small>© Eleonora & Francesco 2025</small>
+  </footer>
+
+  <script>
+    // Countdown
+    function updateCountdown() {
+      const eventDate = new Date('2025-09-30T12:00:00');
+      const now = new Date();
+      let diff = eventDate - now;
+      if (diff < 0) diff = 0;
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const mins = Math.floor((diff / (1000 * 60)) % 60);
+      const secs = Math.floor((diff / 1000) % 60);
+      document.getElementById('countdown').innerHTML =
+        `<span>${days}</span> giorni <span>${hours}</span> ore <span>${mins}</span> min <span>${secs}</span> sec`;
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // RSVP Form (demo, no backend)
+    /*document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Grazie per la conferma!');
+      this.reset();
+    });*/
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
